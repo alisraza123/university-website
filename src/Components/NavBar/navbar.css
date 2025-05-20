@@ -1,0 +1,121 @@
+nav {
+    width: 100%;
+    /* background: #000; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.logo {
+    filter: invert(100%);
+    width: 50px;
+
+}
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 5px 20px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.554);
+    cursor: pointer;
+}
+
+.btn {
+    padding: 14px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 13px;
+    border: 0;
+    outline: 0;
+    background-color: white;
+    color: #212121;
+}
+
+.darkNav {
+    background-color: #212EA0;
+    transition: .5s all ease;
+}
+
+li button {
+    padding: 10px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 13px;
+    border: 0;
+    outline: 0;
+    background-color: rgba(0, 0, 0, 0.337);
+    color: rgba(255, 255, 255, 0.554);
+}
+
+.active {
+    color: rgb(255, 255, 255) !important;
+    transition: .3s all ease;
+}
+
+.menuIcon {
+    width: 30px;
+    display: none;
+}
+.show{
+    right: 0;
+    transform:scaleX(1);
+}
+/* media query */
+@media screen and (max-width: 1200px) {
+    .logo {
+        width: 60px;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+}
+
+
+@media screen and (max-width: 850px) {
+    .logo,.menuIcon{
+        width: 50px;
+
+    }
+    .nav {
+        padding: 15px 0;
+        position: relative;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        background-color: #212EA0;
+        z-index: -1;
+        width: 200px;
+        padding-top: 70px;
+        transition: 0.5s all linear;
+        bottom: 0;
+        transform:scaleX(2);
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px 40px;
+    }
+
+    li button {
+        padding: 10px 15px;
+    }
+
+    .menuIcon {
+        width: 30px;
+        display: block;
+        cursor: pointer;
+        position: fixed;
+        right: 30px;
+
+}
+}
+
